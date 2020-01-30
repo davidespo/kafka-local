@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  kadmin:
+    image: bettercloud/kadmin:latest
+    ports:
+      - '10000:8080'
+    volumes:
+      - $PWD/kadmin.properties:/app/application.properties
+  kafdrop:
+    image: obsidiandynamics/kafdrop
+    environment:
+      KAFKA_BROKERCONNECT: docker.for.mac.localhost:9092
+      SCHEMAREGISTRY_CONNECT: 'http://docker.for.mac.localhost:8081'
+      JVM_OPTS: '-Xms32M -Xmx64M'
+      SERVER_SERVLET_CONTEXTPATH: '/'
+    ports:
+      - '10001:9000'
+  kafkahq:
+    image: tchiotludo/kafkahq
+    ports:
+      - '10002:8080'
+    volumes:
+      - $PWD/kafkahq.yml:/app/application.yml

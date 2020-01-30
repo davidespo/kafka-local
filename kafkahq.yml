@@ -1,0 +1,8 @@
+kafkahq:
+  key: local-dev
+  connections:
+    local: # url friendly name for the cluster (letter, number, _, -, ... dot are not allowed here)
+      properties: # standard kafka properties (optional)
+        bootstrap.servers: 'docker.for.mac.localhost:9092'
+      schema-registry:
+        url: 'http://docker.for.mac.localhost:8081' # schema registry url (optional)
