@@ -52,7 +52,7 @@ kafdrop:
 
 [http://localhost:10000/kadmin](http://localhost:10000/kadmin)
 
-[https://github.com/obsidiandynamics/kafdrop](https://github.com/obsidiandynamics/kafdrop)
+[https://github.com/bettercloud/kadmin](https://github.com/bettercloud/kadmin)
 
 - Consume messages per topic
 - Produce messages per topic
